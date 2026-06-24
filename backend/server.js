@@ -6,10 +6,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Test route
 app.get("/", (req, res) => {
     res.send("Backend working");
 });
 
+// Generate interview questions
 app.post("/generate-questions", (req, res) => {
 
     console.log("Route hit!");
@@ -27,6 +29,7 @@ app.post("/generate-questions", (req, res) => {
     res.json({ questions });
 });
 
+// Start server
 app.listen(5000, () => {
     console.log("Server is running on port 5000");
 });
